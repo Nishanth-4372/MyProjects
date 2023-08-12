@@ -1,0 +1,1 @@
+openaiKeyCode= "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"
