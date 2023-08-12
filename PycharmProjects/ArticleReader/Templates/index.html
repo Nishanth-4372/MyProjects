@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Newspaper Chatbot App</title>
+</head>
+<body>
+    <h1>Newspaper Chatbot App</h1>
+    <form method="POST">
+        <label for="article_url">Enter Article URL:</label>
+        <input type="text" name="article_url" required><br>
+        <label for="question">Ask a Question:</label>
+        <input type="text" name="question" required><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if answer %}
+    <h2>Answer:</h2>
+    <p>{{ answer }}</p>
+    {% endif %}
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>

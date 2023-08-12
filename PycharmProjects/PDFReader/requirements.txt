@@ -1,0 +1,6 @@
+Flask
+transformers
+PyMuPDF
+torch
+
+

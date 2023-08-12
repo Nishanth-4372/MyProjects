@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Chatbot</title>
+</head>
+<body>
+    <h1>PDF Chatbot</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="pdf_file">Select a PDF:</label>
+        <input type="file" id="pdf_file" name="pdf_file">
+        <input type="submit" value="Upload">
+    </form>
+    {% if success %}
+    <div>
+        <p>{{ message }}</p>
+    </div>
+    {% endif %}
+    <br>
+    <div>
+        <h2>Ask a question:</h2>
+        <form action="/chat" method="post">
+            <input type="text" id="question" name="question">
+            <input type="submit" value="Ask">
+        </form>
+        <br>
+        <div id="answer">
+            <!-- The chatbot's answer will be displayed here -->
+        </div>
+    </div>
+</body>
+</html>
